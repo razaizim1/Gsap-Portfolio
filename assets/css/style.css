@@ -1,0 +1,348 @@
+/*
+Template Name: Sass
+Template URI: 
+Author: Coder IT Solution
+Author URI: 
+
+Table of Content: 
+1.
+2.
+3.
+4.
+5.
+*/
+
+
+
+
+/*****************************/
+/********* 1. Heder Area *****/
+/*****************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  /* background-color: red; */
+  /* overflow-x: hidden; */
+}
+
+
+
+#main {
+  width: 100%;
+}
+
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #111;
+  color: #fff;
+  z-index: 999;
+}
+
+.loader h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  font-weight: 600;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.loader .top-heading {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+}
+
+.reveal .parent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.child span {
+  display: inline-block;
+}
+
+.reveal .parent .child {
+  display: block;
+}
+
+.loader .top-heading h5 {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.green {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  height: 0vh;
+  background-color: #14cf93;
+  z-index: 99;
+}
+
+.maz {
+  color: #14cf93;
+  font-style: italic;
+}
+
+.home {
+  width: 100%;
+  height: 150vh;
+  background-color: #fcfaf8;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  height: 100px;
+  margin: auto;
+}
+
+nav a {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 14px;
+  color: #000;
+}
+
+nav .line {
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  background-color: #4e4e4e;
+  bottom: 0;
+}
+
+#line1 {
+  width: 0;
+  left: 0;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+  transition-delay: .1s;
+}
+
+#line2 {
+  width: 100%;
+  right: 0;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+nav a:hover #line1 {
+  width: 100%;
+}
+
+nav a:hover #line2 {
+  width: 0;
+}
+
+.row1 {
+  margin-top: 2vw;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+  padding: 0 7vw;
+  line-height: 1;
+  padding-right: 12vw;
+
+}
+
+.row1 h1 {
+  font-size: 13vw;
+  font-weight: 500;
+  line-height: 265px;
+}
+
+.row1 .text {
+  margin-top: 0vw;
+}
+
+.row1 h5 {
+  opacity: .6;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.row1:nth-child(3) {
+  margin-top: 0;
+}
+
+.row1 svg {
+  height: 9vw;
+  margin: 0 2vw;
+}
+
+path,
+polyline {
+  stroke: #14cf93;
+}
+
+.imagery {
+  margin-top: 20vw;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5vw 7vw;
+}
+
+.imagery .imgleft {
+  width: 30%;
+  height: auto;
+}
+
+.imgleft {
+  font-size: 2vw;
+  font-weight: 600;
+  color: #333;
+}
+
+.imagery h1 {
+  font-size: 2.4vw;
+  font-weight: 500;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.imagery h1 span {
+  color: #14cf93;
+  font-style: italic;
+}
+
+.imgright {
+  width: 60%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgright .imgcntnr {
+  width: 27vw;
+  height: 40vw;
+  position: absolute;
+  border-radius: 1vw;
+  filter: saturate(0);
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.imgright .imgcntnr:hover {
+  filter: saturate(1);
+}
+
+.imgright .imgcntnr:nth-child(1) {
+  transform: translate(-30%, -8%) rotate(-15deg);
+  background: url('../images/person3.jpg') no-repeat scroll 0 0 / cover;
+  /* background: #000; */
+}
+
+.imgright .imgcntnr:nth-child(2) {
+  transform: translate(15%, 1%) rotate(-6deg);
+  background: url('../images/person2.jpg') no-repeat scroll 0 0 / cover;
+
+}
+
+.imgright .imgcntnr:nth-child(3) {
+  transform: translate(45%, 10%) rotate(0deg);
+  background: url('../images/person1.jpg') no-repeat scroll 0 0 / cover;
+}
+
+.work {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  background-color: #f2f2f2;
+  z-index: -1;
+  padding-top: 150px;
+}
+
+.work::before {
+  content: '';
+  background-image: url("../images/work-bg.svg");
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 150px;
+  background-size: cover;
+  transform: rotate(-180deg);
+  top: -75px;
+}
+
+.work-content {
+  padding: 5vw 12vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.work-content h2 {
+  font-size: 8vw;
+  font-weight: 500;
+  display: flex;
+  align-items: baseline;
+}
+
+.work-content h2 .mini {
+  font-size: 2vw;
+  font-weight: 500;
+  margin-left: 2vw;
+}
+
+.o-ui-arrow {
+  width: 5vw;
+  transform: rotate(90deg);
+}
+
+.o-ui-arrow path {
+  stroke: rgb(158, 158, 158)
+}
+
+.images {
+  width: 100%;
+  position: relative;
+  padding: 0 5vw;
+  margin-top: 6vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.images .cnt {
+  overflow: hidden;
+  /* background-color: red; */
+  border-radius: 50px;
+}
+
+.images .cnt1 {
+  width: 55%;
+}
+
+.images .cnt2 {
+  width: 28%;
+}
+
+.images .cnt img {
+  width: 110%;
+}
+
