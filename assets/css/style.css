@@ -29,8 +29,13 @@ html,
 body {
   width: 100%;
   height: 100%;
+  font-family: 'Gilroy';
   /* background-color: red; */
   /* overflow-x: hidden; */
+}
+
+a {
+  text-decoration: none;
 }
 
 
@@ -53,7 +58,7 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-size: 40px;
+  font-size: 75px;
   font-weight: 600;
   width: 100%;
   display: flex;
@@ -68,6 +73,20 @@ body {
   text-align: center;
 }
 
+.loader .top-heading b, .first-name{
+  font-family: 'MAZIUS REVIEW 20.09';
+  font-style: italic;
+
+}
+
+.loader .top-heading b, .last-name{
+  color: #14cf93;
+  font-weight: 500;
+  font-family: 'MAZIUS REVIEW 20.09';
+  font-style: italic;
+
+}
+
 .reveal .parent {
   width: 100%;
   display: flex;
@@ -77,6 +96,7 @@ body {
 
 .child span {
   display: inline-block;
+  /* opacity: 1; */
 }
 
 .reveal .parent .child {
@@ -99,14 +119,14 @@ body {
 
 .maz {
   color: #14cf93;
-  font-style: italic;
+  font-family: 'MAZIUS REVIEW 20.09';
 }
 
-.home {
+/* .home {
   width: 100%;
   height: 150vh;
   background-color: #fcfaf8;
-}
+} */
 
 nav {
   display: flex;
@@ -119,11 +139,15 @@ nav {
 
 nav a {
   position: relative;
-  text-decoration: none;
   text-transform: uppercase;
   font-weight: 300;
   font-size: 14px;
   color: #000;
+  transition: all .5s;
+}
+
+nav a:hover{
+  color: #14cf93;
 }
 
 nav .line {
@@ -199,7 +223,7 @@ polyline {
 }
 
 .imagery {
-  margin-top: 20vw;
+  margin: 20vw 0vw;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -223,6 +247,7 @@ polyline {
   font-weight: 500;
   color: #333;
   letter-spacing: 1px;
+  max-width: 400px;
 }
 
 .imagery h1 span {
@@ -265,7 +290,7 @@ polyline {
 
 .imgright .imgcntnr:nth-child(3) {
   transform: translate(45%, 10%) rotate(0deg);
-  background: url('../images/person1.jpg') no-repeat scroll 0 0 / cover;
+  background: url('../images/razai-zim.png') no-repeat scroll 0 0 / cover;
 }
 
 .work {
@@ -273,8 +298,9 @@ polyline {
   width: 100%;
   min-height: 70vh;
   background-color: #f2f2f2;
-  z-index: -1;
-  padding-top: 150px;
+  /* z-index: -1; */
+  padding-top: 60px;
+  transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .work::before {
@@ -290,7 +316,7 @@ polyline {
 }
 
 .work-content {
-  padding: 5vw 12vw;
+  padding: 0vw 12vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -326,11 +352,21 @@ polyline {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  padding-bottom: 6vw;
+}
+
+.images2 {
+  width: 100%;
+  position: relative;
+  padding: 0 5vw;
+  margin-top: 6vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .images .cnt {
   overflow: hidden;
-  /* background-color: red; */
   border-radius: 50px;
 }
 
@@ -342,7 +378,261 @@ polyline {
   width: 28%;
 }
 
-.images .cnt img {
-  width: 110%;
+.images2 .cnt3 {
+  width: 50%;
 }
 
+.images .cnt img {
+  width: 110%;
+  transition: filter 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.cursor {
+  position: absolute;
+  width: 17vw;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  pointer-events: none;
+}
+
+.cursor .new {
+  position: absolute;
+}
+
+.cursor>div {
+  opacity: 0;
+  position: absolute;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.elem {
+  width: 100%;
+  position: relative;
+  position: absolute;
+}
+
+.cursor .crow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* width: 20%; */
+  padding: .7vw;
+}
+
+.crow .ccricle {
+  width: 2vw;
+  height: 2vw;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.crow .ccapsule {
+  padding: .7vw 3vw;
+  border-radius: 100px;
+  background-color: #fff;
+}
+
+.elem img {
+  width: 100%;
+  opacity: 0;
+  animation: an 4s linear infinite;
+  position: absolute;
+}
+
+.elem img:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.elem img:nth-child(3) {
+  animation-delay: 2s;
+}
+
+.elem img:nth-child(4) {
+  animation-delay: 3s;
+}
+
+.elem img:nth-child(5) {
+  animation-delay: 4s
+}
+
+@keyframes an {
+  0% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  21% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+
+}
+
+.footer {
+  padding: 5vw 0;
+  background: #253b39;
+}
+
+.footer-heading h2 {
+  max-width: 43%;
+  margin: auto;
+  text-align: center;
+  font-size: 5vw;
+  color: white;
+  padding-bottom: 5vw;
+}
+
+.footer .menus {
+  /* text-align: center; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 5vw;
+}
+
+.footer .menus a {
+  display: inline-block;
+  padding: 2vw 15vw;
+  border: 1px solid white;
+  border-radius: 60px;
+  font-size: 2vw;
+  font-weight: 600;
+  color: white;
+  position: relative;
+  z-index: 999;
+}
+
+.footer .menus a::before {
+  content: '';
+  position: absolute;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 0%;
+  border-radius: 60px;
+  transition: all .2s;
+  z-index: -1;
+  opacity: 0;
+}
+
+.footer .menus a:hover:before {
+  width: 100%;
+  opacity: 1;
+}
+
+.footer .menus a:hover {
+  color: black;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 50px;
+  /* margin-bottom: 5vw; */
+}
+
+.socials a:hover {
+  color: white;
+}
+
+.socials p,
+.socials h5 {
+  margin: 0;
+}
+
+.socials h5 {
+  font-size: 24px;
+  padding-bottom: 4px;
+}
+
+.socials p {
+  font-size: 12px;
+  padding-bottom: 4px;
+  opacity: .6;
+}
+
+.icon {
+  transition: all .5s;
+}
+
+.icon i {
+  width: 45px;
+  height: 45px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: black;
+  font-size: 20px;
+}
+
+.social-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 5px 0px;
+  border-top: 1px solid white;
+  transition: all .2s;
+  position: relative;
+  z-index: 11;
+}
+
+.social-items:hover .content {
+  transform: translateX(15px);
+}
+
+.social-items:hover .icon {
+  transform: translateX(-15px);
+}
+
+.social-items::before {
+  content: '';
+  position: absolute;
+  background-color: #14cf93;
+  height: 0%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: all .2s;
+  z-index: -1;
+}
+
+.social-items:hover:before {
+  height: 100%;
+}
+
+.social-items .content {
+  padding-right: 120px;
+  transition: all .5s;
+}
+
+/* 
+.socials .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} */

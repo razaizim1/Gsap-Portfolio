@@ -8,6 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/fonts/stylesheet.css">
 
     <!-- CSS Links -->
     <link href="assets/css/fontawesome.min.css" rel="stylesheet">
@@ -23,16 +27,17 @@
 <body>
 
 
-    <div id="main">
+    <div id="main" data-scroll-container>
         <div class="loader">
             <div class="top-heading">
                 <h5 class="reveal">Creative Portfolio</h5>
                 <h5 class="reveal">&copy;2023</h5>
             </div>
-            <h1 class="reveal"> <span>Razai</span> <span class="maz">Zim</span> <span>is</span> <span>a</span> </h1>
+            <h1 class="reveal"> <strong class="first-name">Razai</strong> <strong class="last-name">Zim</strong>
+                <span>is</span> <span>a</span> </h1>
         </div>
         <div class="green"></div>
-        <div class="home">
+        <div class="home" data-scroll-section>
             <nav>
                 <a href="#">Razai Zim
                     <span id="line1" class="line"></span>
@@ -52,7 +57,7 @@
                 </a>
             </nav>
             <div class="row1">
-                <h1 class="reveal">Creative</h1>
+                <h1 data-scroll data-scroll-speed="4" data-scroll-position="top" class="reveal">Creative</h1>
                 <div class="text">
                     <h5 class="reveal">Currently Available For</h5>
                     <h5 class="reveal">Freelance Worldwide</h5>
@@ -64,7 +69,7 @@
             </div>
             <div class="row1">
                 <img src="assets/images/down-arrowsvg.svg" alt="Arrow Image">
-                <div class="c-visual">
+                <div  data-scroll data-scroll-speed="4" data-scroll-position="top" class="c-visual">
                     <div class="c-visual">
                         <svg id="Visual" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             viewBox="0 35 870 305">
@@ -166,12 +171,12 @@
                         </svg>
                     </div>
                 </div>
-                <h1 class="reveal">Designer</h1>
+                <h1 data-scroll data-scroll-speed="4" data-scroll-direction="horizontal" class="reveal">Designer</h1>
             </div>
             <div class="imagery">
                 <div class="imgleft">
-                    <h1>I AM ABHISHEK JHA, I CREATE <span>Unconventional</span> YET FUNCTIONAL & VISUALLY PLEASING
-                        INTERFACES FOR THE MOBILE AND WEB.</h1>
+                    <h1>I AM RAZAI <span>ZIM</span>, I CREATE <span>Unconventional</span> YET FUNCTIONAL & VISUALLY PLEASING
+                        INTERFACES FOR FRONTEND AND BACKEND WEB.</h1>
                 </div>
                 <div class="imgright">
                     <div class="imgcntnr"></div>
@@ -181,7 +186,7 @@
             </div>
             <div class="work">
                 <div class="work-content">
-                    <h2>Feat Wo<span class="maz">r</span>ks <div class="mini">(05)</div>
+                    <h2>Feat Wo<span class="maz">r</span>ks <div class="mini">(02)</div>
                     </h2>
                     <svg class="o-ui-arrow" width="64" height="64" viewBox="0 0 64 64" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -193,11 +198,106 @@
                 </div>
                 <div class="images">
                     <div class="cnt cnt1">
-                        <img data-scroll data-scroll-speed="-1.5" src="assets/images/work-img1.png" alt="Image">
+                        <a target="_blank" href="https://www.behance.net/wpexpert5956"><img data-color="b4bacf"
+                                data-index="0" data-scroll data-scroll-speed="-1.5" src="assets/images/work-img1.png"
+                                alt="Image"></a>
                     </div>
                     <div class="cnt cnt2">
-                        <img data-scroll data-scroll-speed="-1.5" src="assets/images/work-img2.png" alt="Image">
+                        <a target="_blank" href="https://www.behance.net/wpexpert5956"><img data-color="bae5e3"
+                                data-index="1" data-scroll data-scroll-speed="-1.5" src="assets/images/work-img2.png"
+                                alt="Image"></a>
                     </div>
+                </div>
+                <div class="cursor">
+                    <div>
+                        <div class="crow">
+                            <div class="ccricle"></div>
+                            <div class="ccapsule">
+                                Behance
+                            </div>
+                        </div>
+                        <div class="elem">
+                            <img src="assets/images/portfolio/11.png" alt="Portfolio">
+                            <img src="assets/images/portfolio/22.png" alt="Portfolio">
+                            <img src="assets/images/portfolio/33.png" alt="Portfolio">
+                            <img src="assets/images/portfolio/44.png" alt="Portfolio">
+                            <img src="assets/images/portfolio/55.png" alt="Portfolio">
+                            <img src="assets/images/portfolio/66.png" alt="Portfolio">
+                            <img src="assets/images/portfolio/77.png" alt="Portfolio">
+                            <img src="assets/images/portfolio/88.png" alt="Portfolio">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="crow">
+                            <div class="ccricle"></div>
+                            <div class="ccapsule">
+                                Behance
+                            </div>
+                        </div>
+                        <div class="elem">
+                            <img src="assets/images/portfolio/1.png" alt="Portfolio">
+                            <img src="assets/images/portfolio/2.png" alt="Portfolio">
+                            <img src="assets/images/portfolio/3.png" alt="Portfolio">
+                            <img src="assets/images/portfolio/4.png" alt="Portfolio">
+                            <img src="assets/images/portfolio/5.png" alt="Portfolio">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="footer-heading">
+                    <h2>LET'S <span class="maz">TALK</span> ABOUT THE NEXT BIG THING</h2>
+                </div>
+                <div class="menus">
+                    <a href="#">Write a Message</a>
+                    <a href="#">Discuss Project</a>
+                </div>
+                <div class="socials">
+                    <a href="#">
+                        <div class="social-items">
+                            <div class="content">
+                                <h5>Behance</h5>
+                                <p>@razaizim</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-brands fa-behance"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="social-items">
+                            <div class="content">
+                                <h5>Instagram</h5>
+                                <p>@razaizim</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="social-items">
+                            <div class="content">
+                                <h5>Dribble</h5>
+                                <p>@razaizim</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-brands fa-dribbble"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="social-items">
+                            <div class="content">
+                                <h5>Twitter</h5>
+                                <p>@razaizim</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa-brands fa-twitter"></i>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>

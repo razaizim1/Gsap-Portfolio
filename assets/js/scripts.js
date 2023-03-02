@@ -5,7 +5,6 @@ function valueSetters() {
 
   document.querySelectorAll("#Visual>g").forEach(function (e) {
     var char = e.childNodes[1].childNodes[1];
-    console.log(char);
 
     char.style.strokeDasharray = char.getTotalLength() + "px";
     char.style.strokeDashoffset = char.getTotalLength() + "px";
@@ -36,9 +35,10 @@ function loaderAnimation() {
 
   tl.from(".loader .child span", {
     x: 100,
+    opacity: 0,
     delay: 1,
     stagger: 0.2,
-    duration: 1.5,
+    duration: 1,
     ease: Power3.easeInOut,
   });
 
@@ -56,17 +56,17 @@ function loaderAnimation() {
     height: "100%",
     top: 0,
     duration: 1,
-    delay: -0.8,
-    ease: Circ.easeInOut,
+    delay: -2,
+    ease: Expo.easeInOut,
     onComplete: function () {
       animateHomepage();
     },
   });
   tl.to(".green", {
     height: "0",
-    duration: 2,
+    duration: 1.5,
     delay: -0.5,
-    ease: Circ.easeInOut,
+    ease: Circ.easeOut,
   });
 }
 
@@ -104,14 +104,50 @@ function animateSvg() {
   });
 }
 
-function loco() {
+// function loco() {
+//   const scroll = new LocomotiveScroll({
+//     el: document.querySelector("#main"),
+//     smooth: true,
+//   });
+// }
+
+function locoText() {
   const scroll = new LocomotiveScroll({
-    el: document.querySelector("#main"),
-    smooth: true,
+    el: document.querySelector("[data-scroll-container]"),
+    smooth: true
+  });
+}
+
+function cardShow() {
+  document.querySelectorAll(".cnt").forEach(function (cnt) {
+    console.log(cnt);
+    // var showingImage;
+    cnt.addEventListener("mousemove", function (dets) {
+      document.querySelector(".cursor").children[
+        dets.target.dataset.index
+      ].style.opacity = 1;
+      showingImage = dets.target;
+      document.querySelector(".cursor").children[
+        dets.target.dataset.index
+      ].style.transform = `translate(${dets.clientX}px,${dets.clientY}px)`;
+      showingImage.style.filter = "saturate(0)";
+      document.querySelector(".work").style.backgroundColor =
+        "#" + dets.target.dataset.color;
+    });
+
+    cnt.addEventListener("mouseleave", function (dets) {
+      document.querySelector(".cursor").children[
+        showingImage.dataset.index
+      ].style.opacity = 0;
+      showingImage.style.filter = "saturate(1)";
+      document.querySelector(".work").style.backgroundColor = "#fff";
+    });
   });
 }
 
 revealToSpan();
 valueSetters();
 loaderAnimation();
-loco();
+// loco();
+cardShow();
+locoText()
